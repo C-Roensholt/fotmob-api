@@ -50,7 +50,7 @@ class FotmobAPI:
 
     # League
 
-    def get_league_all(self):
+    def get_league_all(self) -> Dict[str, Any]:
         """Get all leagues from FotMob
 
         Returns:
