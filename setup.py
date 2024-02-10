@@ -15,7 +15,15 @@ setup(
     license="MIT",
     python_requires=">=3.7",
     install_requires=requirements,
-    extras_require={"test": ["pytest", "python-dotenv"]},
+    extras_require={
+        "test": ["pytest", "python-dotenv"],
+        "examples": [
+            "pandas>=2.2",
+            "plottable>=0.1.5",
+            "matplotlib>=3.8.2",
+            "mplsoccer",
+        ],
+    },
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),
