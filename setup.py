@@ -8,7 +8,7 @@ with open("README.md") as f:
 
 setup(
     name="fotmob-api",
-    version="1.0.0",
+    version="{{VERSION_PLACEHOLDER}}",
     description="API wrapper for Fotmob",
     author="Christian Rønsholt",
     author_email="ronsholt32@gmail.com",
