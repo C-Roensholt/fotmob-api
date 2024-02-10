@@ -235,7 +235,9 @@ class FotmobAPI:
         """
         return self._get("teams", id=team_id, ccode3=ccode)
 
-    def get_team_season_stats(self, team_id: int, tournament_id: int) -> Dict[str, Any]:
+    def get_team_season_stats(
+        self, team_id: int, tournament_id: int, is_team_sub_tab: bool = False
+    ) -> Dict[str, Any]:
         """Get season statistics for a specific team in a given tournament.
 
         Args:
@@ -245,7 +247,12 @@ class FotmobAPI:
         Returns:
             Dict[str, Any]: Season statistics for the specified team in the given tournament.
         """
-        return self._get(teamId=team_id, tournamentId=tournament_id)
+        return self._get(
+            "teamseasonstats",
+            teamId=team_id,
+            tournamentId=tournament_id,
+            isTeamSubTab=is_team_sub_tab,
+        )
 
     def get_team_historical_table(self, team_id: int) -> Dict[str, Any]:
         """Get historical table information for a specific team.
