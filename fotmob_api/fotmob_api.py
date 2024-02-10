@@ -69,7 +69,7 @@ class FotmobAPI:
         """
         return self._get("leagueOfTheWeek", ccode3=ccode)
 
-    def get_league_overview(self, id: int):
+    def get_league_overview(self, league_id: int):
         """Get basic information about the specified league
 
         Args:
@@ -78,7 +78,7 @@ class FotmobAPI:
         Returns:
             json: Basic information about a specified league
         """
-        return self._get("leagues", id, "overview")
+        return self._get("leagues", league_id, "overview")
 
     def get_league_table(
         self, league_id: int, teams: int | List[int] = None
